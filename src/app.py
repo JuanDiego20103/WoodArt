@@ -11,5 +11,13 @@ def index():
 def login():
     return render_template("login.html")
 
+@app.route("/productos")
+def productos():
+    return render_template("productos.html")
+
+@app.route("/carrito")
+def carrito():
+    return render_template("carrito.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

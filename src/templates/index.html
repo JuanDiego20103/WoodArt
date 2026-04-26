@@ -7,7 +7,8 @@
 <body>
     <header>
         <div class="container">
-            <p class="logo">WoodArt</p>
+            <a href="#" class="logo">WoodArt</a>
+            <button class="menu-toggle">☰</button>
             <nav>
                 <div class="dropdown">
                     <a href="#">Todas las categorias</a>
@@ -24,9 +25,63 @@
                     <button type="submit">Buscar</button>
                 </form>
                 <a href="/login">Ingresar</a>
-                <a href="#">Carrito</a>  
+                <a href="/carrito"><ion-icon name="cart-outline"></ion-icon></a>  
             </nav>
         </div>
+        <section class="hero">
+    <div class="hero-content">
+        <h1>Muebles de madera con estilo</h1>
+        <p>Calidad artesanal para tu hogar</p>
+        <a href="/productos" class="btn">Ver productos</a>
+    </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section class="products">
+    <h2>Productos destacados</h2>
+
+    <div class="product-grid">
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Mesa de roble</h3>
+            <p>$250.000</p>
+            <button>Agregar</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Silla clásica</h3>
+            <p>$120.000</p>
+            <button>Agregar</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Armario rústico</h3>
+            <p>$800.000</p>
+            <button>Agregar</button>
+        </div>
+    </div>
+</section>
+
+<!-- OFERTAS -->
+<section class="offers">
+    <h2>Ofertas especiales</h2>
+
+    <div class="offer-banner">
+        <p>🔥 20% de descuento en muebles seleccionados</p>
+        <a href="#" class="btn">Aprovechar</a>
+    </div>
+</section>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     </header>
+    <script>
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+</script>
 </body>
 </html>

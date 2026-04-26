@@ -1,0 +1,38 @@
+
+.cart-container {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.empty-cart {
+    margin-top: 50px;
+}
+
+.empty-cart img {
+    width: 120px;
+    opacity: 0.6;
+}
+
+.empty-cart h2 {
+    margin: 20px 0 10px;
+    font-size: 24px;
+}
+
+.empty-cart p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.btn {
+    background: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hover bonito */
+.btn:hover {
+    background: #d35400;
+}

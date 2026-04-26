@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/productos.css') }}">
+</head>
+<body>
+    <main class="products-page">
+
+    <h1>Nuestros productos</h1>
+
+    <!-- FILTROS -->
+    <div class="filters">
+        <button>Todos</button>
+        <button>Maderas</button>
+        <button>Muebles</button>
+        <button>Puertas</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Mesa de roble</h3>
+            <p class="price">$250.000</p>
+            <button>Agregar al carrito</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Silla moderna</h3>
+            <p class="price">$120.000</p>
+            <button>Agregar al carrito</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Puerta de madera</h3>
+            <p class="price">$500.000</p>
+            <button>Agregar al carrito</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Closet rústico</h3>
+            <p class="price">$900.000</p>
+            <button>Agregar al carrito</button>
+        </div>
+
+    </div>
+
+</main>
+</body>
+</html>

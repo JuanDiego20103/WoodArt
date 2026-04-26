@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WoodArt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">WoodArt</a>
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <div class="dropdown">
+                    <a href="#">Todas las categorias</a>
+                    <div class="dropdown-content">
+                        <a href="#">Maderas</a>
+                        <a href="#">Muebles</a>
+                        <a href="#">Herrajes</a>
+                        <a href="#">Pisos</a>
+                        <a href="#">Puertas</a>
+                    </div>
+                </div>
+                <form action="/buscar.html"method="get">
+                    <input type="text" name="q" placeholder="¿Que buscas?. . .">
+                    <button type="submit">Buscar</button>
+                </form>
+                <a href="/login">Ingresar</a>
+                <a href="/carrito"><ion-icon name="cart-outline"></ion-icon></a>  
+            </nav>
+        </div>
+        <main>
+    {% block content %}
+    {% endblock %}
+</main>
+</body>
+</html>

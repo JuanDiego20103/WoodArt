@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/carrito.css') }}">
-</head>
-<body>
-    <main class="cart-container">
+{% extends "layout.html" %}
+
+{% block title %}Carrito{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/carrito.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="cart-container">
 
     <h1>Tu carrito</h1>
 
@@ -18,5 +19,4 @@
     </div>
 
 </main>
-</body>
-</html>
+{% endblock %}

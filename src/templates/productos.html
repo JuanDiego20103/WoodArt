@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/productos.css') }}">
-</head>
-<body>
-    <main class="products-page">
+{% extends "layout.html" %}
+
+{% block title %}Productos{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/productos.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="products-page">
 
     <h1>Nuestros productos</h1>
 
@@ -53,5 +53,4 @@
     </div>
 
 </main>
-</body>
-</html>
+{% endblock %}

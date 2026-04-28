@@ -1,34 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>WoodArt</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <a href="#" class="logo">WoodArt</a>
-            <button class="menu-toggle">☰</button>
-            <nav>
-                <div class="dropdown">
-                    <a href="#">Todas las categorias</a>
-                    <div class="dropdown-content">
-                        <a href="#">Maderas</a>
-                        <a href="#">Muebles</a>
-                        <a href="#">Herrajes</a>
-                        <a href="#">Pisos</a>
-                        <a href="#">Puertas</a>
-                    </div>
-                </div>
-                <form action="/buscar.html"method="get">
-                    <input type="text" name="q" placeholder="¿Que buscas?. . .">
-                    <button type="submit">Buscar</button>
-                </form>
-                <a href="/login">Ingresar</a>
-                <a href="/carrito"><ion-icon name="cart-outline"></ion-icon></a>  
-            </nav>
-        </div>
-        <section class="hero">
+{% extends "layout.html" %}
+
+{% block title %}WoodArt{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
     <div class="hero-content">
         <h1>Muebles de madera con estilo</h1>
         <p>Calidad artesanal para tu hogar</p>
@@ -73,9 +52,11 @@
         <a href="#" class="btn">Aprovechar</a>
     </div>
 </section>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    </header>
-    <script>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script>
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('nav');
 
@@ -83,5 +64,4 @@ toggle.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
 </script>
-</body>
-</html>
+{% endblock %}

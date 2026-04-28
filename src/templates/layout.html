@@ -1,13 +1,16 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>WoodArt</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WoodArt{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    {% block extra_head %}{% endblock %}
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="#" class="logo">WoodArt</a>
+        <div class="nav-container">
+            <a href="/" class="logo">WoodArt</a>
             <button class="menu-toggle">☰</button>
             <nav>
                 <div class="dropdown">
@@ -20,17 +23,19 @@
                         <a href="#">Puertas</a>
                     </div>
                 </div>
-                <form action="/buscar.html"method="get">
+                <form action="/buscar.html" method="get">
                     <input type="text" name="q" placeholder="¿Que buscas?. . .">
                     <button type="submit">Buscar</button>
                 </form>
                 <a href="/login">Ingresar</a>
-                <a href="/carrito"><ion-icon name="cart-outline"></ion-icon></a>  
+                <a href="/carrito"><ion-icon name="cart-outline"></ion-icon></a>
             </nav>
         </div>
-        <main>
-    {% block content %}
-    {% endblock %}
-</main>
+    </header>
+    <div class="page-content">
+        {% block content %}{% endblock %}
+    </div>
+    {% block footer %}{% endblock %}
+    {% block scripts %}{% endblock %}
 </body>
 </html>
